@@ -3,7 +3,14 @@ import 'package:provider/provider.dart';
 
 import 'model/app_state_model.dart';
 
-class ProductListTab extends StatelessWidget {
+class ShoppingCartTab extends StatefulWidget {
+  @override
+  _ShoppingCartTabState createState() {
+    return _ShoppingCartTabState();
+  }
+}
+
+class _ShoppingCartTabState extends State<ShoppingCartTab> {
   @override
   Widget build(BuildContext context) {
     return Consumer<AppStateModel>(
@@ -11,7 +18,7 @@ class ProductListTab extends StatelessWidget {
         return const CustomScrollView(
           slivers: <Widget>[
             CupertinoSliverNavigationBar(
-              largeTitle: Text('Cupertino Store'),
+              largeTitle: Text('Shopping Cart'),
             ),
           ],
         );

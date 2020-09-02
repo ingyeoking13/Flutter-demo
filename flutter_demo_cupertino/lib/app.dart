@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_demo_cupertino/model/product.dart';
 
 import 'product_list_tab.dart';   // NEW
 import 'search_tab.dart';

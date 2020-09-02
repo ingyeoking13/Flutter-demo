@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo_cupertino/app.dart';
+import 'package:provider/provider.dart';
+
+import 'model/app_state_model.dart';
 
 void main() {
-  runApp(CupertinoStoreApp());
+  return runApp(
+    ChangeNotifierProvider<AppStateModel>(
+      create: (context)=>AppStateModel()..loadProducts()
+      ,
+      child: CupertinoStoreApp()
+    )
+  );
 }
 /*
 class MyApp extends StatelessWidget {
